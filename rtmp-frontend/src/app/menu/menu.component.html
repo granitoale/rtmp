@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+  <span>RTMP</span>
+  <span class="spacer"></span>
+  <a mat-button routerLink="/">Home</a>
+  @if (!isAuthenticated) {
+    <a mat-button routerLink="/login">Login</a>
+    <a mat-button routerLink="/register">Register</a>
+  }
+  @if (isAuthenticated) {
+    <a mat-button routerLink="/send-message">Send Message</a>
+    <a mat-button (click)="logout()">Logout</a>
+  }
+</mat-toolbar>

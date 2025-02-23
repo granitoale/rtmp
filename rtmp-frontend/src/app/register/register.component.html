@@ -1,0 +1,6 @@
+<app-name-input (registerName)="onNameChange($event)"/>
+<app-email-input (loginEmail)="onEmailChange($event)"/>
+<app-password-input (loginPassword)="onPasswordChange($event)"/>
+<p style="text-align: right;">
+	<button (click)="register()" mat-flat-button [disabled]="!email || !password || !name">Register</button>
+</p>

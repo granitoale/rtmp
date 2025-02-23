@@ -1,0 +1,5 @@
+<app-email-input (loginEmail)="onEmailChange($event)"/>
+<app-password-input (loginPassword)="onPasswordChange($event)"/>
+<p style="text-align: right;">
+	<button (click)="login()" mat-flat-button [disabled]="!email || !password">Login</button>
+</p>

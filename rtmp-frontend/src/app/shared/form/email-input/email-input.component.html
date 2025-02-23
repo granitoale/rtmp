@@ -1,0 +1,11 @@
+<p>
+  <mat-form-field appearance="outline">
+    <mat-label>E-mail</mat-label>
+    <input matInput (blur)="updateErrorMessage()" [formControl]="email" required placeholder="mail@mail.it">
+    @if (email.invalid) {
+      <mat-error>{{errorMessage()}}</mat-error>
+    }
+    <mat-icon matSuffix>mail</mat-icon>
+    <mat-hint>Insert your e-mail</mat-hint>
+  </mat-form-field>
+</p>

@@ -1,0 +1,7 @@
+<mat-form-field appearance="outline">
+  <mat-label>Message</mat-label>
+  <input matInput [formControl]="message" maxlength="100" required>
+</mat-form-field>
+<p style="text-align: right;">
+	<button (click)="sendMessage()" mat-flat-button [disabled]="!message.value">Send</button>
+</p>
